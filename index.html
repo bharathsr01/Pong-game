@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="overlay" class="overlay">
+        <form id="startForm" class="start-form">
+            <h2>Welcome to Pong!</h2>
+            <label>Game Name:<br><input type="text" id="gameName" placeholder="Enter Game Name" required></label><br>
+            <label>Left Player Name:<br><input type="text" id="leftPlayer" value="AI" required></label><br>
+            <label>Left Player Control:<br>
+                <select id="leftControl">
+                    <option value="AI">AI</option>
+                    <option value="Manual">Manual (W/S)</option>
+                </select>
+            </label><br>
+            <label>Right Player Name:<br><input type="text" id="rightPlayer" value="You" required></label><br>
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+    <h1 id="gameTitle">Pong Game</h1>
+    <div class="profiles">
+        <div class="profile" id="leftProfile">
+            <div class="avatar ai">AI</div>
+            <div class="player-name" id="leftProfileName">AI</div>
+            <div class="score" id="leftProfileScore">0</div>
+        </div>
+        <div class="profile" id="rightProfile">
+            <div class="avatar user">You</div>
+            <div class="player-name" id="rightProfileName">You</div>
+            <div class="score" id="rightProfileScore">0</div>
+        </div>
+    </div>
+    <canvas id="pong" width="800" height="400"></canvas>
+    <script src="pong.js"></script>
+</body>
+</html>
